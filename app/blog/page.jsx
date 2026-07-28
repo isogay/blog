@@ -1,20 +1,18 @@
-'use client'
-
 import BlogCard from '@/components/BlogCard'
 import { blogPosts } from '@/lib/blogPosts'
 import styles from './blog.module.css'
 
 export const metadata = {
-  title: 'Blog - All Posts',
-  description: 'Browse all blog posts about technology, travel, lifestyle, and food.',
+  title: 'thuaan blog',
+  description: 'my first cutie blog website =3',
 }
 
 export default function BlogPage() {
   return (
     <div className={styles.blogPage}>
       <div className={styles.header}>
-        <h1>All Blog Posts</h1>
-        <p>Explore articles about technology, travel, lifestyle, and food</p>
+        <h1>thuaan blog</h1>
+        <p>dang gi dang nay btw</p>
       </div>
 
       <div className={styles.postsGrid}>
