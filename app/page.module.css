@@ -1,0 +1,158 @@
+.home {
+  width: 100%;
+}
+
+.hero {
+  padding: 4rem 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.avatar {
+  flex-shrink: 0;
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  clip-path: polygon(
+    30% 5%, 35% 2%, 40% 0.5%, 50% 0%, 60% 0.5%, 65% 2%, 70% 5%,
+    90% 20%, 95% 30%, 97.5% 40%, 100% 50%, 97.5% 60%, 95% 70%, 90% 80%,
+    70% 95%, 65% 98%, 60% 99.5%, 50% 100%, 40% 99.5%, 35% 98%, 30% 95%,
+    10% 80%, 5% 70%, 2.5% 60%, 0% 50%, 2.5% 40%, 5% 30%, 10% 20%
+  );
+}
+
+.avatar::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: var(--accent-primary);
+  border-radius: 30px;
+  clip-path: polygon(
+    30% 5%, 35% 2%, 40% 0.5%, 50% 0%, 60% 0.5%, 65% 2%, 70% 5%,
+    90% 20%, 95% 30%, 97.5% 40%, 100% 50%, 97.5% 60%, 95% 70%, 90% 80%,
+    70% 95%, 65% 98%, 60% 99.5%, 50% 100%, 40% 99.5%, 35% 98%, 30% 95%,
+    10% 80%, 5% 70%, 2.5% 60%, 0% 50%, 2.5% 40%, 5% 30%, 10% 20%
+  );
+  z-index: -1;
+}
+
+.heroText h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.heroText p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--text-primary);
+  transform: translateY(-3px);
+}
+
+.postsSection {
+  max-width: 1200px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.postsSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 1.125rem;
+  padding: 3rem 0;
+}
+
+@media (max-width: 968px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .heroText h1 {
+    font-size: 2rem;
+  }
+
+  .postsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .heroText h1 {
+    font-size: 1.75rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+
+  .postsSection {
+    padding: 0 1rem;
+  }
+}
